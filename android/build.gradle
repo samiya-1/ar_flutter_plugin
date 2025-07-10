@@ -39,7 +39,9 @@ android {
         minSdkVersion 24
     }
 }
-
+kotlin {
+    jvmToolchain(17) // ✅ Force Kotlin to use Java 17
+}
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.google.ar:core:1.22.0"
