@@ -92,3 +92,10 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
         jvmTarget = "17"
     }
 }
+tasks.withType(JavaCompile).configureEach {
+    options.fork = true
+    options.forkOptions.executable = "/opt/homebrew/opt/openjdk@17/bin/javac"
+    sourceCompatibility = "17"
+    targetCompatibility = "17"
+}
+
